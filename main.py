@@ -15,6 +15,8 @@ APP_ONBOARDING = common.config()["app"]["onboarding"]
 INPUT_INSTRUCTION = common.config()["app"]["input"]
 UPLOAD_INSTRUCTION = common.config()["app"]["upload"]
 ALLOWED_EXTENSIONS = common.config()["settings"]["extensions"]
+RAG_CHECBOX = common.config()["app"]["rag"]["checkbox"]
+RAG_INPUT_INSTRUCTION = common.config()["app"]["rag"]["input"]
 SELECT_BOX_INSTRUCTION = common.config()["app"]["select_box"]["instruction"]
 SELECT_BOX_OPTIONS = common.config()["app"]["select_box"]["options"]
 OUTPUT_INSTRUCTION = common.config()["app"]["output"]
@@ -45,6 +47,17 @@ if uploaded_file is not None:
         stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
         # To read file as string:
         content = stringio.read()
+
+# Enable Retrieval (RAG) if the user wants to
+query = None
+is_rag = st.checkbox(RAG_CHECBOX)
+if is_rag:
+    st.text_input(RAG_INPUT_INSTRUCTION, value=query)
+    # Embed the query
+
+    # Fetch the content from the database
+
+    content = "WIP: RAG is not yet implemented."
 
 content = st.text_area(INPUT_INSTRUCTION, value=content)
 tone = st.selectbox(SELECT_BOX_INSTRUCTION, SELECT_BOX_OPTIONS)
