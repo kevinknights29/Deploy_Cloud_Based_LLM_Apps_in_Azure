@@ -6,7 +6,12 @@ from openai import OpenAI
 
 CLIENT = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 SYSTEM_PROMPT = "You are a social media content writer. Your tasks is to be helpful, creative, clever, and engaging."
-USER_PROMPT = "Based on the following content and tone, write a social media post that will get the most engagement."
+USER_PROMPT = """Create a visually striking and emotionally engaging social media post that reflects
+the expertise of a digital marketer.
+The content should be highly personalized, encouraging interaction through relatable
+narratives or thought-provoking questions.
+The post should be suitable for a diverse audience, aligned with the brand's values,
+and optimized for high engagement on social media platforms."""
 
 
 def generate_post(
