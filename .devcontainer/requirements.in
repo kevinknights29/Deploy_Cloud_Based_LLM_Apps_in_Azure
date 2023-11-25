@@ -2,3 +2,4 @@ streamlit
 PyYAML
 openai
 PyPDF2
+qdrant-client
