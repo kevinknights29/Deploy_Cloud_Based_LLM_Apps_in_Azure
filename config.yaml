@@ -9,12 +9,15 @@ app:
   select_box:
     instruction: "Select the tone of the post you want to generate"
     options:
-      - Captivating
-      - Informative
-      - Neutral
+      - "Captivating"
+      - "Informative"
+      - "Neutral"
   output: "Here will be your post 🎉"
   submit: "Generate Post 🚀"
 settings:
   extensions:
     - ".txt"
     - ".pdf"
+vectordb:
+  url: "localhost"
+  port: 6333
