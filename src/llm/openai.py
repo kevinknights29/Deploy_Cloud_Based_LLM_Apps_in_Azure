@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import streamlit as st
 from openai import OpenAI
 
@@ -7,7 +9,11 @@ USER_PROMPT = "Based on the following content and tone, write a social media pos
 
 
 def generate_post(
-    content: str, tone: str, client: OpenAI = CLIENT, system_prompt: str = SYSTEM_PROMPT, user_prompt: str = USER_PROMPT
+    content: str,
+    tone: str,
+    client: OpenAI = CLIENT,
+    system_prompt: str = SYSTEM_PROMPT,
+    user_prompt: str = USER_PROMPT,
 ) -> str:
     """
     Generates a post using OpenAI's GPT-3.5-turbo model.

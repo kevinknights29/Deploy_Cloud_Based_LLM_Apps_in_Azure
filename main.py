@@ -1,10 +1,12 @@
+from __future__ import annotations
+
 from io import StringIO
 
-import streamlit as st
 import PyPDF2
+import streamlit as st
 
-from src.utils import common
 from src.llm import openai
+from src.utils import common
 
 logger = common.create_logger(__name__)
 

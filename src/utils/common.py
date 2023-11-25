@@ -1,10 +1,13 @@
+from __future__ import annotations
+
 import logging
 import sys
 
 import yaml
 from yaml.loader import SafeLoader
-from src.utils.constants import LOGGING_FORMAT
+
 from src.utils.constants import CONFIG_FILE
+from src.utils.constants import LOGGING_FORMAT
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
