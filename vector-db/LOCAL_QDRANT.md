@@ -1,4 +1,4 @@
-# Running qdrant in docker
+# Running qdrant in docker `Locally`
 
 ## Setup
 
@@ -10,6 +10,7 @@ docker pull qdrant/qdrant
 
 ```bash
 docker run -p 6333:6333 \
+    --network host \
     -v $(pwd)/vector-db/data:/qdrant/storage \
     -v $(pwd)/vector-db/.config/config.yaml:/qdrant/config/production.yaml \
     qdrant/qdrant
@@ -27,12 +28,17 @@ If you would like to run the container in the background and keep your terminal 
 
 ```bash
 docker run -d -p 6333:6333 \
+    --network host \
     -v $(pwd)/vector-db/data:/qdrant/storage \
     -v $(pwd)/vector-db/.config/config.yaml:/qdrant/config/production.yaml \
     qdrant/qdrant
 ```
 
 The flag `-d` will detach the docker container output from your terminal.
+The `--network host` will allow the container to connect to localhost.
+
+Feel free to ignore this error:
+`WARNING: Published ports are discarded when using host network mode`
 
 ![image](https://github.com/kevinknights29/Deploy_Cloud_Based_LLM_Apps_in_Azure/assets/74464814/6a7a4b9b-2e4d-4d25-aa82-8c1e6948986b)
 
