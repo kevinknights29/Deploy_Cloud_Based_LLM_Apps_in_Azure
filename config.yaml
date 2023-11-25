@@ -1,0 +1,15 @@
+app:
+  title: "📨 My Post Generator ✨"
+  onboarding:
+    - "## Welcome to 📨 My Post Generator ✨"
+    - ""
+    - "This is a simple tool to generate your post."
+  input: "Enter the content for the post here 😉"
+  select_box:
+    instruction: "Select the tone of the post you want to generate"
+    options:
+      - Captivating
+      - Informative
+      - Neutral
+  output: "Here will be your post 🎉"
+  submit: "Generate Post 🚀"
