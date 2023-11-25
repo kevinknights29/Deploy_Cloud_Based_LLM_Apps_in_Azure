@@ -6,6 +6,9 @@ app:
     - "This is a simple tool to generate your post."
   input: "📝 Enter the content for the post here 😉"
   upload: "📎 Upload the content for the post here 😉"
+  rag:
+    checkbox: "📌 Check this box if you want to generate a post with RAG (Retrieval Augment Generation)"
+    input: "🔎 Enter your question or focus for the post here 😉"
   select_box:
     instruction: "Select the tone of the post you want to generate"
     options:
