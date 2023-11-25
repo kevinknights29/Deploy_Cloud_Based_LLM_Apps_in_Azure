@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import streamlit as st
+from langchain.embeddings.openai import OpenAIEmbeddings
 from openai import OpenAI
 
 CLIENT = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
@@ -40,3 +41,16 @@ def generate_post(
         ],
     )
     return response.choices[0].message.content
+
+
+def get_embeddings(
+    client: OpenAI = CLIENT,
+) -> OpenAIEmbeddings:
+    """
+    Get the OpenAI embeddings.
+
+    Returns:
+        OpenAIEmbeddings: The OpenAI embeddings.
+
+    """
+    return OpenAIEmbeddings(client=client.embeddings)
