@@ -33,3 +33,15 @@ This project aims to build a social media marketing application for the session:
 |      |          |
 
 ## Resources
+
+- [Streamlit App on Azure](https://towardsdatascience.com/beginner-guide-to-streamlit-deployment-on-azure-f6618eee1ba9)
+- [qdrant Azure Kubernetes Service](https://github.com/Azure-Samples/qdrant-azure/blob/main/Azure-Kubernetes-Svc/README.md)
+- [RAG OpenAI and qdrant](https://colab.research.google.com/github/qdrant/examples/blob/master/rag-openai-qdrant/rag-openai-qdrant.ipynb#scrollTo=43154775)
+- [qdrant Quick Start Guide](https://qdrant.tech/documentation/quick-start/)
+- [qdrant locally with Docker](https://github.com/Azure-Samples/qdrant-azure/blob/main/Local-Docker-Deployment/README.md)
+- [Streamlif Getting Started Docs](https://docs.streamlit.io/library/get-started)
+- [OpenAI Chat Completion Error](https://stackoverflow.com/questions/77444332/openai-python-package-error-chatcompletion-object-is-not-subscriptable)
+- [Upload PDF to Streamlit](https://medium.com/@jyotikhetan2/creating-a-pdf-viewer-with-streamlit-uploading-and-displaying-pdf-files-26587097d047)
+- [Langchain with qdrant](https://python.langchain.com/docs/integrations/vectorstores/qdrant)
+- [Langchain document transformer](https://python.langchain.com/docs/modules/data_connection/document_transformers/)
+- [Langchain OpenAI emebeddings](https://python.langchain.com/docs/integrations/text_embedding/openai)
