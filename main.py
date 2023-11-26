@@ -64,7 +64,12 @@ if is_rag:
     st.text_input(RAG_INPUT_INSTRUCTION, value=query)
     if st.button(RAG_SEARCH_BUTTON):
         # Fetch the content from the database
-        content = qdrant.query_collection(collection="content", query=query)
+        logger.info(query)
+        content = qdrant.query_collection(
+            collection="content",
+            documents=docs,
+            query=query,
+        )
     else:
         content = "👀 Information will be searched from the database."
 
@@ -76,6 +81,10 @@ tone = st.selectbox(SELECT_BOX_INSTRUCTION, SELECT_BOX_OPTIONS)
 if st.button(SUBMIT_BUTTON):
     if is_rag:
         # Fetch the content from the database
-        content = qdrant.query_collection(collection="content", query=query)
+        content = qdrant.query_collection(
+            collection="content",
+            documents=docs,
+            query=query,
+        )
     post_content = openai.generate_post(content, tone)
     st.text_area(OUTPUT_INSTRUCTION, value=post_content, height=500)
