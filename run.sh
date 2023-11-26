@@ -1,3 +1,5 @@
 #!/bin/bash
 
-streamlit run main.py --theme.base "dark"
+nginx -t &&
+service nginx start &&
+streamlit run project_contents/app/app.py --theme.base "dark"
