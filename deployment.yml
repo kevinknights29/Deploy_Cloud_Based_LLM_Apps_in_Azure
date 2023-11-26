@@ -1,0 +1,33 @@
+api-version: 2019-12-01
+location: eastus
+name: genai_amaliaconf_2023
+properties:
+  containers:
+    - name: streamlitapp
+      properties:
+        image: genaiamaliaconf2023registry.azurecr.io/genai_amaliaconf_2023:v1.1
+        ports:
+          - port: 80
+            protocol: TCP
+          - port: 443
+            protocol: TCP
+        resources:
+          requests:
+            cpu: 2.0
+            memoryInGB: 1.5
+  imageRegistryCredentials:
+    - server: genaiamaliaconf2023registry.azurecr.io
+      username: genaiamaliaconf2023registry
+      password: ivXcaA7AQ5K9qZo964ucMxs5rDGmFqKJ6R7e1/0lDf+ACRAcQpev
+  restartPolicy: Never
+  ipAddress:
+    ports:
+      - port: 443
+        protocol: TCP
+      - port: 80
+        protocol: TCP
+    type: Public
+    dnsNameLabel: mypostgenerator
+  osType: Linux
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
