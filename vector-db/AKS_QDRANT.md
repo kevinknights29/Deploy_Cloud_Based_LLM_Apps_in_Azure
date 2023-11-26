@@ -20,6 +20,22 @@ Check full list of options for Windows [here](https://learn.microsoft.com/en-us/
 
 Docs: [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 
+### Helm
+
+MacOS
+
+```bash
+brew install helm
+```
+
+Windows
+
+```powershell
+choco install kubernetes-helm
+```
+
+For more, reference: [Helm Install](https://helm.sh/docs/intro/install/)
+
 ## Deployment
 
 1. Create a resource group in Azure
@@ -37,7 +53,7 @@ Docs: [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-az
     --name qdrantVectorDB \
     --resource-group '<YOUR_RESOURCE_GROUP_NAME_CREATED_ABOVE>' \
     --template-file vector-db/aks/main.bicep \
-    --parameters location='eastus' environmentName='qdrantazureaks' linuxAdminUsername='<YOUR_PUBLIC_SSH_KEY_CREATED_ABOVE>' sshRSAPublicKey='<YOUR_PUBLIC_SSH_KEY_CREATED_ABOVE>'
+    --parameters location='eastus' environmentName='qdrantazureaks' linuxAdminUsername='<YOUR_USERNAME>' sshRSAPublicKey='<YOUR_PUBLIC_SSH_KEY_CREATED_ABOVE>'
     ```
 
     To point to a path, you can: `"$(cat your/ssh/path)"`
