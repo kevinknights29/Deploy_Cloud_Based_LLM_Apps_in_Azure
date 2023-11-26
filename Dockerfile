@@ -28,6 +28,9 @@ WORKDIR /opt/app
 # Copy files
 COPY .streamlit src config.yaml main.py requirements.txt install_dependencies.sh run.sh ./
 
+# Copy nginx config
+COPY nginx.conf /etc/nginx/nginx.conf
+
 # Install dependencies
 RUN bash ./install_dependencies.sh ./requirements.txt && \
     rm ./install_dependencies.sh ./requirements.txt
