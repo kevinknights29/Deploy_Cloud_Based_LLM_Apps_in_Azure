@@ -45,3 +45,4 @@ This project aims to build a social media marketing application for the session:
 - [Langchain with qdrant](https://python.langchain.com/docs/integrations/vectorstores/qdrant)
 - [Langchain document transformer](https://python.langchain.com/docs/modules/data_connection/document_transformers/)
 - [Langchain OpenAI emebeddings](https://python.langchain.com/docs/integrations/text_embedding/openai)
+- [OpenAI cookbook - qdrant](https://cookbook.openai.com/examples/vector_databases/qdrant/using_qdrant_for_embeddings_search)
